@@ -6,7 +6,7 @@ let employees = [
     {name: "Gina", hourlyRate: 25, hoursWorked: 38}
 ];
 //Step 3
-function calculateBasePay (rate, hours) {
+function calculateBasePay(rate, hours) {
 let regularHours;
 if (hours > 40) {
     regularHours = 40;
@@ -24,4 +24,8 @@ if (hours > 40) {
     overtimeHours = 0
 }
 return overtimeHours * rate * 1.5;
+}
+//Step 5
+function calculateTaxes(grossPay) {
+return grossPay * 0.15;
 }
