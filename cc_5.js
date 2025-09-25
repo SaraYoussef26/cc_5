@@ -15,3 +15,13 @@ if (hours > 40) {
 }
 return regularHours * rate; 
 }
+//Step 4
+function calculateOvertimePay(rate, hours) {
+let overtimeHours;
+if (hours > 40) {
+    overtimeHours = hours - 40
+} else {
+    overtimeHours = 0
+}
+return overtimeHours * rate * 1.5;
+}
