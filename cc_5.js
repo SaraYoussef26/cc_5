@@ -19,10 +19,10 @@ if (hoursWorked > 40) {
 }
 return regularHours * hourlyRate; 
 }
-console.log(`Employee Name: $[employee.name], Base.Pay: $${calculateBasePay(employee.hourlyRate, employee.hoursWorked)}`)
+console.log(`Employee Name: ${employee.name}, Base.Pay: $${calculateBasePay(employee.hourlyRate, employee.hoursWorked)}`)
 
 //Step 4
-function calculateOvertimePay(hourlyRaterate, hoursWorked) {
+function calculateOvertimePay(hourlyRate, hoursWorked) {
 let overtimeHours;
 if (hoursWorked > 40) {
     overtimeHours = hoursWorked - 40;
@@ -49,3 +49,9 @@ return {
     netPay: netPay
 }
 }
+//Step 7
+employees.forEach(employee =>{
+    let processPayroll= processPayroll (employee)
+    console.log(processPayroll)
+}
+);
